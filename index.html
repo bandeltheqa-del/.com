@@ -1,0 +1,3136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+   
+    
+    <!-- =====================================================
+         إعدادات الصفحة الأساسية
+         ===================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="8uarxbhJaAb6DKhzYkJZivtsbNWU9rdfbEFXyw9lML4" />
+
+
+    <!-- جعل الموقع متجاوب مع الموبايل والتابلت والكمبيوتر -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- اسم الموقع الذي يظهر في تبويب المتصفح -->
+    <title>بند الثقة | مؤسسة سعودية</title>
+
+
+    <!-- =====================================================
+         بداية تنسيق الموقع CSS
+         كل التنسيقات موجودة داخل نفس ملف HTML
+         ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           الألوان الأساسية للموقع
+           لو حبيتي تغيري ألوان الموقع كلها من مكان واحد
+           غيري الألوان الموجودة هنا
+           ===================================================== */
+
+        :root {
+
+            /* اللون الكحلي الأساسي */
+            --navy: #071827;
+
+            /* كحلي أفتح */
+            --navy-light: #102c42;
+
+            /* كحلي إضافي */
+            --navy-soft: #183b55;
+
+            /* الذهبي الأساسي */
+            --gold: #c7a45b;
+
+            /* ذهبي فاتح */
+            --gold-light: #e2c982;
+
+            /* ذهبي غامق */
+            --gold-dark: #98742f;
+
+            /* لون الخلفيات الفاتحة */
+            --cream: #f6f3ec;
+
+            /* الأبيض */
+            --white: #ffffff;
+
+            /* لون الكتابة */
+            --text: #172737;
+
+            /* لون النصوص الثانوية */
+            --muted: #748292;
+        }
+
+
+        /* =====================================================
+           إعادة ضبط العناصر الافتراضية
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* جعل الانتقال بين أقسام الموقع ناعمًا */
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        /* شكل الصفحة الأساسي */
+        body {
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            line-height: 1.8;
+
+            overflow-x: hidden;
+        }
+
+
+        /* إزالة الخط من الروابط */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* منع الصور من الخروج عن حجم العنصر */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* الحاوية الرئيسية التي تجعل المحتوى منظمًا */
+        .container {
+
+            width: min(1180px, 90%);
+
+            margin: auto;
+        }
+
+
+
+        /* =====================================================
+           الهيدر العلوي للموقع
+           ===================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            right: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background:
+                rgba(5, 18, 30, 0.92);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
+        }
+
+
+        /* ترتيب عناصر الهيدر */
+        .navbar {
+
+            min-height: 88px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+
+        /* =====================================================
+           اللوجو + اسم المؤسسة
+           
+           مهم:
+           ضعي صورة اللوجو باسم:
+           
+           logo.jpg
+           
+           بجانب ملف index.html مباشرة
+           ===================================================== */
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        /* حجم اللوجو */
+        .brand img {
+
+            width: 64px;
+
+            height: 64px;
+
+            object-fit: contain;
+
+            border-radius: 8px;
+        }
+
+
+        /* اسم المؤسسة بجانب اللوجو */
+        .brand-name {
+
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1.2;
+        }
+
+
+        /* اسم بند الثقة */
+        .brand-name strong {
+
+            color: var(--gold-light);
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* وصف صغير تحت اسم المؤسسة */
+        .brand-name span {
+
+            color: #93a2b0;
+
+            font-size: 9px;
+
+            margin-top: 4px;
+
+            letter-spacing: 1.5px;
+        }
+
+
+
+        /* =====================================================
+           روابط القائمة العلوية
+           ===================================================== */
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 32px;
+        }
+
+
+        /* شكل الروابط */
+        .nav-links a {
+
+            color: #d5dee5;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        /* عند الوقوف على الرابط */
+        .nav-links a:hover {
+
+            color: var(--gold-light);
+        }
+
+
+        /* زر التواصل الموجود في الهيدر */
+        .header-button {
+
+            border:
+                1px solid var(--gold);
+
+            color: var(--gold-light);
+
+            padding: 9px 19px;
+
+            font-size: 11px;
+
+            transition: 0.3s;
+        }
+
+
+        /* تأثير زر التواصل */
+        .header-button:hover {
+
+            background: var(--gold);
+
+            color: var(--navy);
+        }
+
+
+        /* زر القائمة في الموبايل */
+        .menu-button {
+
+            display: none;
+
+            color: white;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+
+        /* =====================================================
+           القسم الرئيسي HERO
+           ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 25%,
+                    rgba(199,164,91,0.15),
+                    transparent 26%
+                ),
+
+                radial-gradient(
+                    circle at 90% 70%,
+                    rgba(34,78,108,0.35),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    125deg,
+                    #030c15,
+                    #071827 55%,
+                    #0d2b42
+                );
+        }
+
+
+        /* دوائر زخرفية في الخلفية */
+        .hero-circle {
+
+            position: absolute;
+
+            border:
+                1px solid rgba(199,164,91,0.15);
+
+            border-radius: 50%;
+        }
+
+
+        /* الدائرة الكبيرة */
+        .circle-one {
+
+            width: 650px;
+
+            height: 650px;
+
+            left: -330px;
+
+            top: 10%;
+        }
+
+
+        /* الدائرة المتوسطة */
+        .circle-two {
+
+            width: 430px;
+
+            height: 430px;
+
+            left: -220px;
+
+            top: 25%;
+        }
+
+
+        /* الدائرة الصغيرة */
+        .circle-three {
+
+            width: 220px;
+
+            height: 220px;
+
+            left: -110px;
+
+            top: 38%;
+        }
+
+
+        /* الخط الذهبي الجانبي */
+        .hero-line {
+
+            position: absolute;
+
+            width: 1px;
+
+            height: 60%;
+
+            left: 11%;
+
+            top: 20%;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+
+            opacity: 0.35;
+        }
+
+
+        /* محتوى الصفحة الرئيسية */
+        .hero-content {
+
+            position: relative;
+
+            z-index: 5;
+
+            max-width: 850px;
+        }
+
+
+        /* النص الصغير فوق العنوان */
+        .hero-tag {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: var(--gold-light);
+
+            font-size: 12px;
+
+            margin-bottom: 24px;
+        }
+
+
+        /* الخط الموجود بجانب النص */
+        .hero-tag span {
+
+            width: 42px;
+
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+
+        /* العنوان الرئيسي */
+        .hero h1 {
+
+            color: white;
+
+            font-size:
+                clamp(48px, 7vw, 88px);
+
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 28px;
+        }
+
+
+        /* الجزء الذهبي من العنوان */
+        .hero h1 em {
+
+            color: var(--gold-light);
+
+            font-style: normal;
+        }
+
+
+        /* وصف المؤسسة */
+        .hero-description {
+
+            color: #b8c6d2;
+
+            max-width: 650px;
+
+            font-size: 15px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* أزرار الصفحة الرئيسية */
+        .hero-actions {
+
+            display: flex;
+
+            gap: 13px;
+        }
+
+
+        /* الشكل الأساسي للأزرار */
+        .button {
+
+            min-width: 160px;
+
+            padding: 13px 25px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 12px;
+
+            transition: 0.35s;
+        }
+
+
+        /* الزر الذهبي */
+        .button-gold {
+
+            color: var(--navy);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold),
+                    var(--gold-light)
+                );
+
+            font-weight: 700;
+        }
+
+
+        /* تأثير الزر الذهبي */
+        .button-gold:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(199,164,91,0.2);
+        }
+
+
+        /* الزر الشفاف */
+        .button-outline {
+
+            color: white;
+
+            border:
+                1px solid rgba(255,255,255,0.25);
+        }
+
+
+        /* تأثير الزر الشفاف */
+        .button-outline:hover {
+
+            border-color: var(--gold);
+
+            color: var(--gold-light);
+        }
+
+
+
+        /* =====================================================
+           إعدادات عامة لكل الأقسام
+           ===================================================== */
+
+        section {
+
+            padding: 110px 0;
+        }
+
+
+        /* عنوان كل قسم */
+        .section-heading {
+
+            max-width: 700px;
+
+            margin: 0 auto 65px;
+
+            text-align: center;
+        }
+
+
+        /* العنوان الإنجليزي الصغير */
+        .eyebrow {
+
+            color: var(--gold-dark);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+        }
+
+
+        /* عنوان القسم */
+        .section-heading h2 {
+
+            color: var(--navy);
+
+            font-size: 42px;
+
+            line-height: 1.35;
+
+            margin: 10px 0 15px;
+        }
+
+
+        /* الوصف أسفل العنوان */
+        .section-heading p {
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+
+        /* =====================================================
+           قسم عن المؤسسة
+           ===================================================== */
+
+        .about {
+
+            background: var(--cream);
+        }
+
+
+        /* تقسيم القسم إلى جزئين */
+        .about-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            gap: 85px;
+
+            align-items: center;
+        }
+
+
+        /* التصميم الموجود في جانب القسم */
+        .about-visual {
+
+            height: 500px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #071827,
+                    #0d3048
+                );
+
+            overflow: hidden;
+        }
+
+
+        /* الدائرة الأولى */
+        .about-visual::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            border:
+                1px solid
+                rgba(199,164,91,0.25);
+
+            border-radius: 50%;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform:
+                translate(-50%,-50%);
+        }
+
+
+        /* الدائرة الثانية */
+        .about-visual::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 210px;
+
+            height: 210px;
+
+            border:
+                1px solid
+                rgba(199,164,91,0.17);
+
+            border-radius: 50%;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform:
+                translate(-50%,-50%);
+        }
+
+
+        /* الحرف الموجود في المنتصف */
+        .about-symbol {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform:
+                translate(-50%,-50%);
+
+            width: 100px;
+
+            height: 100px;
+
+            border:
+                1px solid var(--gold);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--gold-light);
+
+            font-size: 42px;
+        }
+
+
+        /* الكتابة الموجودة أسفل الصورة */
+        .about-corner {
+
+            position: absolute;
+
+            bottom: 30px;
+
+            right: 30px;
+
+            color: white;
+        }
+
+
+        .about-corner strong {
+
+            display: block;
+
+            color: var(--gold-light);
+
+            font-size: 24px;
+        }
+
+
+        .about-corner span {
+
+            color: #8ea0b1;
+
+            font-size: 10px;
+        }
+
+
+        /* عنوان النص */
+        .about-text .small-title {
+
+            color: var(--gold-dark);
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        /* العنوان الرئيسي */
+        .about-text h3 {
+
+            color: var(--navy);
+
+            font-size: 39px;
+
+            line-height: 1.4;
+
+            margin: 10px 0 22px;
+        }
+
+
+        /* الكلمة الذهبية */
+        .about-text h3 span {
+
+            color: var(--gold-dark);
+        }
+
+
+        /* فقرات عن المؤسسة */
+        .about-text p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-bottom: 17px;
+        }
+
+
+        /* الخط الذهبي */
+        .gold-line {
+
+            width: 75px;
+
+            height: 2px;
+
+            background: var(--gold);
+
+            margin-top: 30px;
+        }
+
+
+
+        /* =====================================================
+           قسم لماذا بند الثقة
+           ===================================================== */
+
+        .why {
+
+            background: white;
+        }
+
+
+        /* شبكة البطاقات */
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            border-top:
+                1px solid #e4dfd5;
+
+            border-right:
+                1px solid #e4dfd5;
+        }
+
+
+        /* البطاقة */
+        .why-card {
+
+            min-height: 270px;
+
+            padding: 38px;
+
+            border-left:
+                1px solid #e4dfd5;
+
+            border-bottom:
+                1px solid #e4dfd5;
+
+            transition: 0.35s;
+        }
+
+
+        /* تأثير البطاقة */
+        .why-card:hover {
+
+            background: var(--navy);
+
+            transform: translateY(-5px);
+        }
+
+
+        /* رقم البطاقة */
+        .why-number {
+
+            color: var(--gold);
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* أيقونة البطاقة */
+        .why-icon {
+
+            width: 46px;
+
+            height: 46px;
+
+            border:
+                1px solid var(--gold);
+
+            margin: 28px 0 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--gold);
+
+            font-size: 20px;
+        }
+
+
+        /* عنوان البطاقة */
+        .why-card h3 {
+
+            color: var(--navy);
+
+            font-size: 20px;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* وصف البطاقة */
+        .why-card p {
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* تغيير الكتابة عند تحويم الماوس */
+        .why-card:hover h3 {
+
+            color: white;
+        }
+
+
+        .why-card:hover p {
+
+            color: #9eacb9;
+        }
+
+
+
+        /* =====================================================
+           قسم المشاريع
+           
+           مهم:
+           اعملي فولدر اسمه projects
+           
+           وجواه الصور:
+           project1.jpg
+           project2.jpg
+           project3.jpg
+           project4.jpg
+           ===================================================== */
+
+        .projects {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f3f0e8,
+                    #eeeae1
+                );
+        }
+
+
+        /* شبكة المشاريع */
+        .projects-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(12, 1fr);
+
+            gap: 18px;
+        }
+
+
+        /* بطاقة المشروع */
+        .project {
+
+            position: relative;
+
+            height: 350px;
+
+            overflow: hidden;
+
+            background: var(--navy);
+
+            border:
+                1px solid
+                rgba(199,164,91,0.15);
+        }
+
+
+        /* أحجام صور المشاريع */
+        .project:nth-child(1) {
+            grid-column: span 7;
+        }
+
+
+        .project:nth-child(2) {
+            grid-column: span 5;
+        }
+
+
+        .project:nth-child(3) {
+            grid-column: span 5;
+        }
+
+
+        .project:nth-child(4) {
+            grid-column: span 7;
+        }
+
+
+        /* صورة المشروع */
+        .project img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.6s;
+        }
+
+
+        /* تكبير الصورة عند تحويم الماوس */
+        .project:hover img {
+
+            transform: scale(1.06);
+        }
+
+
+        /* الطبقة السوداء فوق الصورة */
+        .project-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 28px;
+
+            background:
+                linear-gradient(
+                    transparent 25%,
+                    rgba(2,10,17,0.9)
+                );
+        }
+
+
+        /* معلومات المشروع */
+        .project-info {
+
+            width: 100%;
+        }
+
+
+        /* رقم المشروع */
+        .project-label {
+
+            color: var(--gold-light);
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* اسم المشروع */
+        .project h3 {
+
+            color: white;
+
+            font-size: 22px;
+
+            margin-top: 5px;
+        }
+
+
+
+        /* =====================================================
+           قسم العبارة الرئيسية
+           ===================================================== */
+
+        .statement {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(199,164,91,0.12),
+                    transparent 25%
+                ),
+
+                var(--navy);
+
+            padding: 125px 0;
+        }
+
+
+        /* محتوى العبارة */
+        .statement-content {
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 3;
+        }
+
+
+        /* العنوان الصغير */
+        .statement-content .eyebrow {
+
+            color: var(--gold-light);
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+        }
+
+
+        /* العبارة الرئيسية */
+        .statement-content h2 {
+
+            color: white;
+
+            font-size:
+                clamp(36px,5vw,63px);
+
+            line-height: 1.4;
+
+            max-width: 900px;
+
+            margin: 18px auto;
+        }
+
+
+        /* الكلمة الذهبية */
+        .statement-content h2 span {
+
+            color: var(--gold-light);
+        }
+
+
+        /* وصف العبارة */
+        .statement-content p {
+
+            color: #8494a4;
+
+            max-width: 600px;
+
+            margin: auto;
+
+            font-size: 13px;
+        }
+
+
+
+        /* =====================================================
+           قسم التواصل
+           ===================================================== */
+
+        .contact {
+
+            background: var(--cream);
+        }
+
+
+        /* بطاقات التواصل */
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* بطاقة التواصل */
+        .contact-card {
+
+            background: white;
+
+            border:
+                1px solid #e4ded3;
+
+            padding: 42px 30px;
+
+            text-align: center;
+
+            transition: 0.35s;
+        }
+
+
+        /* تأثير بطاقة التواصل */
+        .contact-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(7,24,39,0.09);
+        }
+
+
+        /* =====================================================
+           أيقونات واتساب وإنستجرام وتيك توك
+           ===================================================== */
+
+        .social-icon {
+
+            width: 68px;
+
+            height: 68px;
+
+            margin:
+                auto auto 20px;
+
+            border-radius: 19px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        /* حجم الأيقونة */
+        .social-icon svg {
+
+            width: 34px;
+
+            height: 34px;
+        }
+
+
+        /* لون واتساب */
+        .whatsapp-icon {
+
+            background: #25D366;
+        }
+
+
+        /* ألوان إنستجرام */
+        .instagram-icon {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #833AB4,
+                    #E1306C,
+                    #FCAF45
+                );
+        }
+
+
+        /* لون تيك توك */
+        .tiktok-icon {
+
+            background: #050505;
+        }
+
+
+        /* عنوان التواصل */
+        .contact-card h3 {
+
+            color: var(--navy);
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* وصف التواصل */
+        .contact-card p {
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* زر التواصل */
+        .social-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 9px 22px;
+
+            border:
+                1px solid #dcd6cb;
+
+            font-size: 11px;
+
+            color: var(--navy);
+
+            transition: 0.3s;
+        }
+
+
+        /* تأثير زر التواصل */
+        .social-button:hover {
+
+            background: var(--navy);
+
+            border-color: var(--navy);
+
+            color: white;
+        }
+
+
+
+        /* =====================================================
+           الفوتر
+           ===================================================== */
+
+        footer {
+
+            background: #030d17;
+
+            color: white;
+
+            padding: 65px 0 25px;
+        }
+
+
+        /* محتوى الفوتر */
+        .footer-main {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 70px;
+
+            padding-bottom: 40px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.08);
+        }
+
+
+        /* صورة اللوجو في الفوتر */
+        .footer-logo img {
+
+            width: 75px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* اسم المؤسسة في الفوتر */
+        .footer-brand h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* كلمة الثقة */
+        .footer-brand h3 span {
+
+            color: var(--gold-light);
+        }
+
+
+        /* وصف المؤسسة */
+        .footer-brand p {
+
+            max-width: 370px;
+
+            color: #6e8091;
+
+            font-size: 11px;
+        }
+
+
+        /* عنوان روابط الفوتر */
+        .footer-title {
+
+            color: var(--gold-light);
+
+            font-size: 12px;
+
+            margin-bottom: 17px;
+        }
+
+
+        /* روابط الفوتر */
+        .footer-links a {
+
+            display: block;
+
+            color: #718293;
+
+            font-size: 11px;
+
+            margin: 9px 0;
+
+            transition: 0.3s;
+        }
+
+
+        /* تأثير روابط الفوتر */
+        .footer-links a:hover {
+
+            color: white;
+        }
+
+
+        /* أيقونات التواصل في الفوتر */
+        .footer-social {
+
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 20px;
+        }
+
+
+        /* زر السوشيال */
+        .footer-social a {
+
+            width: 39px;
+
+            height: 39px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: 0.3s;
+        }
+
+
+        /* حجم أيقونات الفوتر */
+        .footer-social svg {
+
+            width: 18px;
+
+            height: 18px;
+
+            fill: #8795a3;
+        }
+
+
+        /* تأثير أيقونات الفوتر */
+        .footer-social a:hover {
+
+            border-color: var(--gold);
+        }
+
+
+        .footer-social a:hover svg {
+
+            fill: var(--gold-light);
+        }
+
+
+        /* أسفل الفوتر */
+        .footer-bottom {
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        /* حقوق الملكية */
+        .copyright {
+
+            color: #536474;
+
+            font-size: 10px;
+        }
+
+
+        /* اسم المبرمجة */
+        .developer {
+
+            color: #536474;
+
+            font-size: 10px;
+        }
+
+
+        .developer strong {
+
+            color: var(--gold-light);
+        }
+
+
+
+        /* =====================================================
+           زر واتساب العائم
+           
+           سيظهر أسفل الشاشة دائمًا
+           ===================================================== */
+
+        .floating-whatsapp {
+
+            position: fixed;
+
+            left: 25px;
+
+            bottom: 25px;
+
+            width: 61px;
+
+            height: 61px;
+
+            background: #25D366;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 999;
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+
+        /* تأثير زر الواتساب */
+        .floating-whatsapp:hover {
+
+            transform: scale(1.1);
+        }
+
+
+        /* حجم أيقونة الواتساب */
+        .floating-whatsapp svg {
+
+            width: 34px;
+
+            height: 34px;
+
+            fill: white;
+        }
+
+
+
+        /* =====================================================
+           حركة ظهور العناصر أثناء النزول في الصفحة
+           ===================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        /* عندما يظهر العنصر */
+        .reveal.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+
+        /* =====================================================
+           إعدادات الموبايل والتابلت
+           ===================================================== */
+
+        @media(max-width:900px) {
+
+
+            /* إخفاء القائمة العادية */
+            .nav-links {
+
+                position: absolute;
+
+                top: 88px;
+
+                right: 0;
+
+                width: 100%;
+
+                background: var(--navy);
+
+                padding: 25px;
+
+                display: none;
+
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+
+            /* إظهار القائمة عند الضغط */
+            .nav-links.active {
+
+                display: flex;
+            }
+
+
+            /* إظهار زر القائمة */
+            .menu-button {
+
+                display: block;
+            }
+
+
+            /* إخفاء زر التواصل الكبير */
+            .header-button {
+
+                display: none;
+            }
+
+
+            /* قسم عن المؤسسة */
+            .about-layout {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            /* بطاقات لماذا بند الثقة */
+            .why-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            /* بطاقات التواصل */
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            /* الفوتر */
+            .footer-main {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           إعدادات شاشة الموبايل الصغيرة
+           ===================================================== */
+
+        @media(max-width:650px) {
+
+
+            /* تقليل المسافات */
+            section {
+
+                padding: 80px 0;
+            }
+
+
+            /* تصغير اللوجو */
+            .brand img {
+
+                width: 55px;
+
+                height: 55px;
+            }
+
+
+            /* تصغير اسم المؤسسة */
+            .brand-name strong {
+
+                font-size: 17px;
+            }
+
+
+            /* تصغير العنوان الرئيسي */
+            .hero h1 {
+
+                font-size: 50px;
+
+                letter-spacing: -2px;
+            }
+
+
+            /* أزرار الصفحة الرئيسية */
+            .hero-actions {
+
+                flex-direction: column;
+            }
+
+
+            /* حجم الزر */
+            .button {
+
+                width: 180px;
+            }
+
+
+            /* بطاقات لماذا بند الثقة */
+            .why-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            /* المشاريع */
+            .projects-grid {
+
+                display: block;
+            }
+
+
+            /* كل مشروع */
+            .project {
+
+                height: 280px;
+
+                margin-bottom: 15px;
+            }
+
+
+            /* التواصل */
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            /* الفوتر */
+            .footer-main {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            /* أسفل الفوتر */
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                text-align: center;
+            }
+
+
+            /* زر الواتساب */
+            .floating-whatsapp {
+
+                width: 55px;
+
+                height: 55px;
+
+                left: 18px;
+
+                bottom: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         الهيدر
+         اللوجو + اسم بند الثقة + القائمة
+         ===================================================== -->
+
+    <header>
+
+        <div class="container navbar">
+
+
+            <!-- =================================================
+                 اللوجو
+                 
+                 مهم جدًا:
+                 ضعي logo.jpg بجانب index.html
+                 
+                 الشكل يكون:
+                 
+                 index.html
+                 logo.jpg
+                 ================================================= -->
+
+            <a href="#home" class="brand">
+
+                <img
+                    src="logo (1).jpg"
+                    alt="لوجو بند الثقة"
+                >
+
+
+                <!-- اسم المؤسسة بجانب اللوجو -->
+
+                <div class="brand-name">
+
+                    <strong>
+                        بند الثقة
+                    </strong>
+
+                    <span>
+                        للمقاولات العامه
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 قائمة الموقع
+                 ================================================= -->
+
+            <nav
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="#home">
+                    الرئيسية
+                </a>
+
+                <a href="#about">
+                    عن المؤسسة
+                </a>
+
+                <a href="#why">
+                    لماذا بند الثقة؟
+                </a>
+
+                <a href="#projects">
+                    مشاريعنا
+                </a>
+
+                <a href="#contact">
+                    تواصل معنا
+                </a>
+
+            </nav>
+
+
+
+            <!-- زر التواصل في الهيدر -->
+
+            <a
+                href="#contact"
+                class="header-button"
+            >
+                تواصل معنا
+            </a>
+
+
+
+            <!-- زر القائمة في الموبايل -->
+
+            <div
+                class="menu-button"
+                id="menuButton"
+            >
+                ☰
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         القسم الرئيسي
+         ===================================================== -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+
+        <!-- دوائر الخلفية -->
+
+        <div class="hero-circle circle-one"></div>
+
+        <div class="hero-circle circle-two"></div>
+
+        <div class="hero-circle circle-three"></div>
+
+
+        <!-- الخط الذهبي -->
+
+        <div class="hero-line"></div>
+
+
+
+        <div class="container">
+
+            <div class="hero-content reveal">
+
+
+                <!-- اسم المؤسسة -->
+
+                <div class="hero-tag">
+
+                    <span></span>
+
+                    مؤسسة بند الثقة
+
+                </div>
+
+
+
+                <!-- العنوان الرئيسي -->
+
+                <h1>
+
+                    نبني قيمة
+
+                    <br>
+
+                    <em>
+                        تستحق الثقة.
+                    </em>
+
+                </h1>
+
+
+
+                <!-- وصف المؤسسة -->
+
+                <p class="hero-description">
+
+                    مؤسسة سعودية بهوية واضحة ورؤية
+                    مستقبلية، نعمل بمنهجية تجمع بين
+                    الجودة والاحترافية والاهتمام الحقيقي
+                    بالتفاصيل.
+
+                </p>
+
+
+
+                <!-- أزرار الصفحة الرئيسية -->
+
+                <div class="hero-actions">
+
+
+                    <a
+                        href="#projects"
+                        class="button button-gold"
+                    >
+                        استكشف مشاريعنا
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="button button-outline"
+                    >
+                        تواصل معنا
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         قسم عن المؤسسة
+         ===================================================== -->
+
+    <section
+        class="about"
+        id="about"
+    >
+
+        <div class="container">
+
+
+            <!-- عنوان القسم -->
+
+            <div class="section-heading reveal">
+
+                <div class="eyebrow">
+                    ABOUT US
+                </div>
+
+                <h2>
+                    أكثر من مؤسسة،
+                    <br>
+                    إنها هوية.
+                </h2>
+
+                <p>
+                    نؤمن أن قوة أي مؤسسة تبدأ
+                    من وضوح هويتها وقيمتها.
+                </p>
+
+            </div>
+
+
+
+            <div class="about-layout">
+
+
+                <!-- الشكل الجمالي -->
+
+                <div class="about-visual reveal">
+
+                    <div class="about-symbol">
+                        ب
+                    </div>
+
+
+                    <div class="about-corner">
+
+                        <strong>
+                            بند الثقة
+                        </strong>
+
+                        <span>
+                            رؤية واضحة • قيمة حقيقية
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- معلومات المؤسسة -->
+
+                <div class="about-text reveal">
+
+                    <div class="small-title">
+                        من نحن؟
+                    </div>
+
+
+                    <h3>
+
+                        مؤسسة سعودية
+                        <span>
+                            تنظر للمستقبل.
+                        </span>
+
+                    </h3>
+
+
+                    <p>
+
+                        بند الثقة مؤسسة سعودية تسعى
+                        إلى بناء حضور مهني قوي من خلال
+                        رؤية واضحة وأسلوب عمل يهتم
+                        بالجودة والتفاصيل.
+
+                    </p>
+
+
+                    <p>
+
+                        نعمل على تطوير الأفكار والمشاريع
+                        وتقديم حلول عملية تعكس مستوى
+                        يليق بهوية المؤسسة وطموحاتها.
+
+                    </p>
+
+
+                    <div class="gold-line"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         لماذا بند الثقة؟
+         ===================================================== -->
+
+    <section
+        class="why"
+        id="why"
+    >
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="eyebrow">
+                    WHY BAND ALTHIQA
+                </div>
+
+                <h2>
+                    لماذا بند الثقة؟
+                </h2>
+
+                <p>
+                    لأننا نؤمن أن التفاصيل الصغيرة
+                    تصنع الفرق الكبير.
+                </p>
+
+            </div>
+
+
+
+            <!-- بطاقات المميزات -->
+
+            <div class="why-grid">
+
+
+                <!-- البطاقة الأولى -->
+
+                <div class="why-card reveal">
+
+                    <div class="why-number">
+                        01
+                    </div>
+
+                    <div class="why-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        وضوح الرؤية
+                    </h3>
+
+                    <p>
+                        نبدأ من رؤية واضحة ونحوّل
+                        الأفكار إلى خطوات منظمة ومدروسة.
+                    </p>
+
+                </div>
+
+
+
+                <!-- البطاقة الثانية -->
+
+                <div class="why-card reveal">
+
+                    <div class="why-number">
+                        02
+                    </div>
+
+                    <div class="why-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        جودة التفاصيل
+                    </h3>
+
+                    <p>
+                        نهتم بالتفاصيل التي تصنع
+                        تجربة احترافية وتعكس قيمة العمل.
+                    </p>
+
+                </div>
+
+
+
+                <!-- البطاقة الثالثة -->
+
+                <div class="why-card reveal">
+
+                    <div class="why-number">
+                        03
+                    </div>
+
+                    <div class="why-icon">
+                        ◎
+                    </div>
+
+                    <h3>
+                        رؤية مستقبلية
+                    </h3>
+
+                    <p>
+                        نعمل بعقلية تنظر للمستقبل
+                        وتسعى إلى التطور المستمر.
+                    </p>
+
+                </div>
+
+
+
+                <!-- البطاقة الرابعة -->
+
+                <div class="why-card reveal">
+
+                    <div class="why-number">
+                        04
+                    </div>
+
+                    <div class="why-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        احترافية
+                    </h3>
+
+                    <p>
+                        نحرص على أن يكون أسلوب العمل
+                        والحضور متوافقًا مع مستوى احترافي.
+                    </p>
+
+                </div>
+
+
+
+                <!-- البطاقة الخامسة -->
+
+                <div class="why-card reveal">
+
+                    <div class="why-number">
+                        05
+                    </div>
+
+                    <div class="why-icon">
+                        ⬡
+                    </div>
+
+                    <h3>
+                        قيمة حقيقية
+                    </h3>
+
+                    <p>
+                        هدفنا صناعة قيمة يمكن ملاحظتها
+                        والاستفادة منها.
+                    </p>
+
+                </div>
+
+
+
+                <!-- البطاقة السادسة -->
+
+                <div class="why-card reveal">
+
+                    <div class="why-number">
+                        06
+                    </div>
+
+                    <div class="why-icon">
+                        ✧
+                    </div>
+
+                    <h3>
+                        استمرارية
+                    </h3>
+
+                    <p>
+                        نبني خطواتنا على أساس يسمح
+                        بالتطور والاستمرار.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         قسم المشاريع
+         
+         مهم:
+         اعملي فولدر اسمه:
+         
+         projects
+         
+         وضعي بداخله الصور:
+         
+         project1.jpg
+         project2.jpg
+         project3.jpg
+         project4.jpg
+         ===================================================== -->
+
+    <section
+        class="projects"
+        id="projects"
+    >
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="eyebrow">
+                    OUR PROJECTS
+                </div>
+
+                <h2>
+                    مشاريعنا
+                </h2>
+
+                <p>
+                    هنا يمكنك عرض صور المشاريع
+                    والأعمال الخاصة بالمؤسسة.
+                </p>
+
+            </div>
+
+
+
+            <div class="projects-grid">
+
+
+                <!-- المشروع الأول -->
+
+                <div class="project reveal">
+
+                    <!--
+                        صورة المشروع الأول
+
+                        يجب أن تكون:
+                        projects/project1.jpg
+                    -->
+
+                    <img
+                        src="projects/project1.jpg"
+                        alt="المشروع الأول"
+                    >
+
+                    <div class="project-overlay">
+
+                        <div class="project-info">
+
+                            <div class="project-label">
+                                PROJECT 01
+                            </div>
+
+                            <h3>
+                                اسم المشروع الأول
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- المشروع الثاني -->
+
+                <div class="project reveal">
+
+                    <!-- صورة المشروع الثاني -->
+
+                    <img
+                        src="projects/project2.jpg"
+                        alt="المشروع الثاني"
+                    >
+
+                    <div class="project-overlay">
+
+                        <div class="project-info">
+
+                            <div class="project-label">
+                                PROJECT 02
+                            </div>
+
+                            <h3>
+                                اسم المشروع الثاني
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- المشروع الثالث -->
+
+                <div class="project reveal">
+
+                    <!-- صورة المشروع الثالث -->
+
+                    <img
+                        src="projects/project3.jpg"
+                        alt="المشروع الثالث"
+                    >
+
+                    <div class="project-overlay">
+
+                        <div class="project-info">
+
+                            <div class="project-label">
+                                PROJECT 03
+                            </div>
+
+                            <h3>
+                                اسم المشروع الثالث
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- المشروع الرابع -->
+
+                <div class="project reveal">
+
+                    <!-- صورة المشروع الرابع -->
+
+                    <img
+                        src="projects/project4.jpg"
+                        alt="المشروع الرابع"
+                    >
+
+                    <div class="project-overlay">
+
+                        <div class="project-info">
+
+                            <div class="project-label">
+                                PROJECT 04
+                            </div>
+
+                            <h3>
+                                اسم المشروع الرابع
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         قسم العبارة الرئيسية
+         ===================================================== -->
+
+    <section class="statement">
+
+        <div class="container">
+
+            <div class="statement-content reveal">
+
+                <div class="eyebrow">
+                    BAND ALTHIQA
+                </div>
+
+
+                <h2>
+
+                    الثقة لا تُكتب،
+
+                    <br>
+
+                    <span>
+                        بل تُبنى.
+                    </span>
+
+                </h2>
+
+
+                <p>
+                    ولهذا نحرص أن تكون كل خطوة
+                    تعكس الاسم الذي نحمله.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         قسم التواصل
+         ===================================================== -->
+
+    <section
+        class="contact"
+        id="contact"
+    >
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="eyebrow">
+                    CONTACT US
+                </div>
+
+                <h2>
+                    تواصل معنا
+                </h2>
+
+                <p>
+                    يمكنك التواصل مع مؤسسة بند الثقة
+                    من خلال منصات التواصل الرسمية.
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-grid">
+
+
+                <!-- =================================================
+                     واتساب
+                     ================================================= -->
+
+                <div class="contact-card reveal">
+
+
+                    <!-- أيقونة واتساب -->
+
+                    <div class="social-icon whatsapp-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                fill="white"
+                                d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.3zM12.1 21.6c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.8 9.8 0 1 1 8.2 4.7zm5.4-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.5-.9-2-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.1-1.3-.1-.2-.3-.3-.6-.4z"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+
+                    <p>
+                        تواصل معنا مباشرة
+                    </p>
+
+
+                    <!--
+                        غيري YOUR_SAUDI_NUMBER
+                        إلى رقم الواتساب السعودي
+
+                        مثال:
+                        9665XXXXXXXX
+
+                        بدون علامة +
+                    -->
+
+                    <a
+                        href="https://wa.me/966504550030"
+                        target="_blank"
+                        class="social-button"
+                    >
+                        محادثة واتساب
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     إنستجرام
+                     ================================================= -->
+
+                <div class="contact-card reveal">
+
+
+                    <!-- أيقونة إنستجرام -->
+
+                    <div class="social-icon instagram-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                fill="white"
+                                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        Instagram
+                    </h3>
+
+
+                    <p>
+                        تابع حساب المؤسسة
+                    </p>
+
+
+                    <!--
+                        غيري YOUR_INSTAGRAM_USERNAME
+                        إلى اسم حساب المؤسسة
+                    -->
+
+                    <a
+                        href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/"
+                        target="_blank"
+                        class="social-button"
+                    >
+                        زيارة الحساب
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     تيك توك
+                     ================================================= -->
+
+                <div class="contact-card reveal">
+
+
+                    <!-- أيقونة تيك توك -->
+
+                    <div class="social-icon tiktok-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                        >
+
+                            <path
+                                fill="white"
+                                d="M16.6 2c.3 1.8 1.3 3.3 3 4.2.7.4 1.5.6 2.4.6v3.3c-1.5 0-2.9-.4-4.1-1.1v7.2c0 4.5-3.4 7.8-7.8 7.8-4.2 0-7.4-3.2-7.4-7.3 0-4.3 3.4-7.5 7.7-7.5.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-2.4 0-4.2 1.7-4.2 4.1 0 2.2 1.7 3.9 4 3.9 2.5 0 4.3-1.7 4.3-4.4V2h2.1z"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <h3>
+                        TikTok
+                    </h3>
+
+
+                    <p>
+                        تابع أحدث المحتوى
+                    </p>
+
+
+                    <!--
+                        غيري YOUR_TIKTOK_USERNAME
+                        إلى اسم حساب المؤسسة
+                    -->
+
+                    <a
+                        href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME"
+                        target="_blank"
+                        class="social-button"
+                    >
+                        زيارة الحساب
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         الفوتر
+         ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="footer-main">
+
+
+                <!-- معلومات المؤسسة -->
+
+                <div class="footer-brand">
+
+
+                    <!-- اللوجو في الفوتر -->
+
+                    <div class="footer-logo">
+
+                        <img
+                            src="logo (1).jpg"
+                            alt="لوجو بند الثقة"
+                        >
+
+                    </div>
+
+
+                    <!-- اسم المؤسسة -->
+
+                    <h3>
+
+                        بند
+                        <span>
+                            الثقة
+                        </span>
+
+                    </h3>
+
+
+                    <!-- وصف المؤسسة -->
+
+                    <p>
+
+                        مؤسسة سعودية بهوية واضحة
+                        ورؤية مستقبلية، نعمل على
+                        صناعة قيمة حقيقية تقوم على
+                        الثقة والجودة.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         أيقونات التواصل في الفوتر
+                         ================================================= -->
+
+                    <div class="footer-social">
+
+
+                        <!-- واتساب -->
+
+                        <a
+                            href="https://wa.me/966504550030"
+                            target="_blank"
+                        >
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.3zM12.1 21.6c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.8 9.8 0 1 1 8.2 4.7z"/>
+
+                            </svg>
+
+                        </a>
+
+
+                        <!-- إنستجرام -->
+
+                        <a
+                            href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/"
+                            target="_blank"
+                        >
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+
+                            </svg>
+
+                        </a>
+
+
+                        <!-- تيك توك -->
+
+                        <a
+                            href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME"
+                            target="_blank"
+                        >
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M16.6 2c.3 1.8 1.3 3.3 3 4.2.7.4 1.5.6 2.4.6v3.3c-1.5 0-2.9-.4-4.1-1.1v7.2c0 4.5-3.4 7.8-7.8 7.8-4.2 0-7.4-3.2-7.4-7.3 0-4.3 3.4-7.5 7.7-7.5.4 0 .8 0 1.2.1v3.4c-.4-.1-.8-.2-1.2-.2-2.4 0-4.2 1.7-4.2 4.1 0 2.2 1.7 3.9 4 3.9 2.5 0 4.3-1.7 4.3-4.4V2h2.1z"/>
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- روابط الموقع -->
+
+                <div class="footer-links">
+
+                    <div class="footer-title">
+                        روابط سريعة
+                    </div>
+
+
+                    <a href="#home">
+                        الرئيسية
+                    </a>
+
+
+                    <a href="#about">
+                        عن المؤسسة
+                    </a>
+
+
+                    <a href="#why">
+                        لماذا بند الثقة؟
+                    </a>
+
+
+                    <a href="#projects">
+                        مشاريعنا
+                    </a>
+
+                </div>
+
+
+
+                <!-- التواصل -->
+
+                <div class="footer-links">
+
+                    <div class="footer-title">
+                        تواصل معنا
+                    </div>
+
+
+                    <a href="#contact">
+                        WhatsApp
+                    </a>
+
+
+                    <a href="#contact">
+                        Instagram
+                    </a>
+
+
+                    <a href="#contact">
+                        TikTok
+                    </a>
+
+
+                    <a href="#contact">
+                        التواصل الرسمي
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 أسفل الفوتر
+                 ===================================================== -->
+
+            <div class="footer-bottom">
+
+
+                <!-- حقوق الموقع -->
+
+                <div class="copyright">
+
+                    © 2026 بند الثقة
+                    — جميع الحقوق محفوظة
+
+                </div>
+
+
+                <!-- اسم المبرمجة -->
+
+                <div class="developer">
+
+                    برمجة وتطوير:
+
+                    <strong>
+                        م/ سلمى وائل
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         زر واتساب العائم
+         
+         هذا الزر سيظل ظاهرًا أسفل الشاشة
+         ===================================================== -->
+
+    <!--
+        مهم:
+        غيري YOUR_SAUDI_NUMBER
+        إلى رقم الواتساب السعودي
+        بدون علامة +
+    -->
+
+    <a
+        href="https://wa.me/966504550030"
+        target="_blank"
+        class="floating-whatsapp"
+        title="تواصل معنا عبر واتساب"
+    >
+
+        <!-- أيقونة واتساب -->
+
+        <svg
+            viewBox="0 0 24 24"
+        >
+
+            <path
+                d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.3zM12.1 21.6c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.8 9.8 0 1 1 8.2 4.7zm5.4-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.4-2.3-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.5-.9-2-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.1-1.3-.1-.2-.3-.3-.6-.4z"
+                fill="white"
+            />
+
+        </svg>
+
+    </a>
+
+
+
+    <!-- =====================================================
+         JavaScript
+         ===================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           فتح وإغلاق قائمة الموبايل
+           ===================================================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        /* عند الضغط على زر القائمة */
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("active");
+
+            }
+        );
+
+
+        /* =====================================================
+           إغلاق القائمة بعد الضغط على أي رابط
+           ===================================================== */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        navLinks.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* =====================================================
+           ظهور العناصر أثناء النزول في الصفحة
+           ===================================================== */
+
+        const elements =
+            document.querySelectorAll(".reveal");
+
+
+        /* الوظيفة المسؤولة عن ظهور العناصر */
+        function revealElements() {
+
+            elements.forEach(
+                function(element) {
+
+                    const position =
+                        element.getBoundingClientRect().top;
+
+
+                    /* إذا وصل العنصر إلى الشاشة يظهر */
+                    if (
+                        position <
+                        window.innerHeight - 80
+                    ) {
+
+                        element.classList.add(
+                            "show"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* تشغيل الحركة أثناء النزول */
+        window.addEventListener(
+            "scroll",
+            revealElements
+        );
+
+
+        /* تشغيلها أول ما الصفحة تفتح */
+        revealElements();
+
+    </script>
+
+
+</body>
+
+</html>
